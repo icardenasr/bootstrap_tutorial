@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <!-- Bootstrap -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body style="padding-top: 70px;">
+    <div class="container">
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a href="/Index.html" class="navbar-brand">Navbar Example</a>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#hamburger-navigation">
+              <span class="sr-only">Navigation toggle</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="collapse navbar-collapse" id="hamburger-navigation">
+            <div class="navbar-text navbar-right">
+              <a class="navbar-link" href="URL here">
+                Follow us!
+              </a>
+            </div>
+            <ul class="nav navbar-nav" role="menu">
+              <li><a href="#" class="active">Current Page</a><span class="sr-only">current</span></li>
+              <li><a href="#">Link</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" role="button" data-toggle="dropdown">Dropdown<span class="caret" /></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Option one</a></li>
+                  <li><a href="#">Option two</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="row">
+        <h1>Ejemplo de rejillas anidadas</h1>
+        <div class='col-md-6'>
+          <div class='row'>
+            <div class='col-md-6'>
+              Izquierda - Izquierda
+            </div>
+            <div class='col-md-6'>
+              Izquierda - Derecha
+            </div>
+          </div>
+        </div>
+        <div class='col-md-6'>
+          <div class='row'>
+            <!-- 12 nuevas columnas aquí -->
+            <div class='col-md-6'>
+              Derecha - Izquierda
+            </div>
+            <div class='col-md-6'>
+              Derecha - Derecha
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <h1>Ejemplo de diseño "mobile first"</h1>
+        <div class="col-xs-12 col-md-6 col-md-push-6">LOGO</div>
+        <div class="col-xs-12 col-md-6 col-md-pull-6">DETALLES</div>
+      </div>
+
+      <div class="row">
+        <h1>Ejemplo de "tabs"</h1>
+        <ul class="nav nav-tabs" role="tablist">
+          <li class="active"><a href="javascript:;" role="tab" data-toggle="tab" data-target="#tabs-first">First</a></li>
+          <li><a href="javascript:;" role="tab" data-toggle="tab" data-target="#tabs-second">Second</a></li>
+        </ul>
+        <div class="tab-content">
+          <div class="active tab-pane fade in" id="tabs-first">
+            <h4>First tab content</h4>
+          </div>
+          <div class="tab-pane fade" id="tabs-second">
+            <h4>Second tab content</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <h1>Ejemplo de "scrollspy"</h1>
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static" role="navigation" id="navbar-spy">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#scroll-first">First</a></li>
+            <li><a href="#scroll-second">Second</a></li>
+          </ul>
+        </nav>
+        <!-- Content -->
+        <div data-target="#navbar-spy" data-spy="scroll" style="height:150px; overflow-y:scroll;position:relative;">
+          <div id="scroll-first">
+            <h4>First block of content</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur urna nulla, venenatis vel fermentum efficitur, vestibulum sed nibh. Aenean sed arcu et purus porta ornare. Nulla in tortor sagittis, semper tellus sit amet, fermentum massa. Etiam ut lacus ac sem sagittis aliquam. Aliquam malesuada urna dignissim diam commodo viverra. Phasellus eget dapibus leo. Nulla sed eros eleifend, euismod quam eu, scelerisque urna. Nullam et eros ipsum. Donec blandit felis mattis justo porttitor, non bibendum erat eleifend. Sed sodales maximus urna, vitae ultrices leo. Aliquam vel mollis risus. Sed ullamcorper volutpat neque eu malesuada. Donec nec ex pellentesque, faucibus sapien sit amet, sollicitudin elit. Ut laoreet, ligula sed viverra rhoncus, augue lorem egestas arcu, id lacinia arcu lorem nec odio. Donec elementum, mi eget convallis hendrerit, lacus lacus posuere nisl, eu dignissim mi ipsum eu massa. Pellentesque ornare sem eros, vel lobortis neque iaculis ut.</p>
+          </div>
+          <div id="scroll-second">
+            <h4>Second block of content</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur urna nulla, venenatis vel fermentum efficitur, vestibulum sed nibh. Aenean sed arcu et purus porta ornare. Nulla in tortor sagittis, semper tellus sit amet, fermentum massa. Etiam ut lacus ac sem sagittis aliquam. Aliquam malesuada urna dignissim diam commodo viverra. Phasellus eget dapibus leo. Nulla sed eros eleifend, euismod quam eu, scelerisque urna. Nullam et eros ipsum. Donec blandit felis mattis justo porttitor, non bibendum erat eleifend. Sed sodales maximus urna, vitae ultrices leo. Aliquam vel mollis risus. Sed ullamcorper volutpat neque eu malesuada. Donec nec ex pellentesque, faucibus sapien sit amet, sollicitudin elit. Ut laoreet, ligula sed viverra rhoncus, augue lorem egestas arcu, id lacinia arcu lorem nec odio. Donec elementum, mi eget convallis hendrerit, lacus lacus posuere nisl, eu dignissim mi ipsum eu massa. Pellentesque ornare sem eros, vel lobortis neque iaculis ut.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <h1>Ejemplo de "panel"</h1>
+        <div class="panel-group" id="accordion-sample">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion-sample" href="javascript:;" data-target="#accordion-sample-one">
+                  Heading One
+                </a>
+              </h4>
+            </div>
+            <div id="accordion-sample-one" class="panel-collapse collapse in">
+              <div class="panel-body">
+                Sample content
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion-sample" href="javascript:;" data-target="#accordion-sample-two">
+                  Heading Two
+                </a>
+              </h4>
+            </div>
+            <div id="accordion-sample-two" class="panel-collapse collapse">
+              <div class="panel-body">
+                Sample content
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" style="padding-bottom: 50px;">
+        <h1>Ejemplo de "carousel"</h1>
+        <div id="carousel-demo" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-demo" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-demo" data-slide-to="1"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="item active">
+              <img alt="First slide" src="./images/image1.jpg" />
+              <div class="carousel-caption">
+                <h3>Caption Heading One</h3>
+                <p>Caption Text One</p>
+              </div>
+            </div>
+            <div class="item">
+              <img alt="Second slide" src="./images/image2.jpg" />
+              <div class="carousel-caption">
+                <h3>Caption Heading Two</h3>
+                <p>Caption Text Two</p>
+              </div>
+            </div>
+          </div>
+          <a class="left carousel-control" href="#carousel-demo" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+          </a>
+          <a class="right carousel-control" href="#carousel-demo" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+    <!-- jQuery -->
+    <script src="./js/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="./js/bootstrap.min.js"></script>
+  </body>
+</html>
