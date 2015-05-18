@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <!-- Bootstrap -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container" style="padding-top: 20px; padding-bottom: 50px;">
+
+      <!-- Alerta -->
+      <div class="container">
+        <div class="alert alert-warning alert-dismissable hidden" id="myAlert">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+          <h3>Warning</h3>
+          <div>
+            It appears that something has gone wrong.
+          </div>
+        </div>
+      </div>
+
+      <!-- Formulario -->
+      <form class="form-horizontal">
+        <div class="form-group has-feedback">
+          <label for="address" class="control-label col-md-3">Email:</label>
+          <div class="col-md-6">
+            <div class="input-group">
+              <div class="input-group-addon">
+                <span class="glyphicon glyphicon-envelope"></span>
+              </div>
+              <input type="email" class="form-control" name="email" id="email" required="required" />
+            </div>
+            <span class="glyphicon form-control-feedback"></span>
+          </div>
+        </div>
+        <div class="form-group has-feedback">
+          <label for="username" class="control-label col-md-3">Username:</label>
+          <div class="col-md-6">
+            <div class="input-group">
+              <div class="input-group-addon">
+                <span class="glyphicon glyphicon-user"></span>
+              </div>
+              <input type="text" class="form-control" name="username" id="username" required="required" />
+            </div>
+            <span class="glyphicon form-control-feedback"></span>
+          </div>
+        </div>
+        <a href="#" id="save" class="btn btn-default col-md-offset-4 col-md-4">Submit</a>
+      </form>
+
+    </div>
+    <!-- jQuery -->
+    <script src="./js/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="./js/bootstrap.min.js"></script>
+    <!-- Javascript de validacion de formulario -->
+    <script>
+      $(function () {
+        // Cuando alguien pulse sobre el botón “save"
+        $('#save').click(function() {
+          // Por defecto suponemos que el formulario es correcto al completo
+          var formvalid = true;
+          // Por cada “input” del formulario
+          $('input').each(function() {
+            // Obtenemos la referencia al form-group como padre del input
+            var formGroup = $(this).parents('.form-group');
+            // Y la referencia al glyphicon desde el form-group
+            var glyphicon = formGroup.find('.glyphicon');
+            // Comprobamos la validez del input usando el metodo que comprueba la validez mediante los atributos de HTML5
+            if (this.checkValidity()) {
+              // Si es válido añadimos las clases que marcan ok y se eliminan las que marcan error por si acaso
+              formGroup.addClass('has-success').removeClass('has-error');
+              glyphicon.addClass('glyphicon-ok').removeClass('glyphicon-remove');
+            } else {
+              // Si no es válido añadimos las clases que marcan error y se eliminan las que marcan ok por si acaso
+              formGroup.addClass('has-error').removeClass('has-success');
+              glyphicon.addClass('glyphicon-remove').removeClass('glyphicon-ok');
+              // Ya que hay un input con error marcamos el formulario como erróneo
+              formvalid = false;
+            }
+          });
+          if (!formvalid) {
+            // Mostramos la alerta
+            $('#myAlert').removeClass('hidden');
+          }
+        });
+      });
+    </script>
+
+  </body>
+</html>

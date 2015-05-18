@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <!-- Bootstrap -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="row">
+        <h1>Ejemplo de formulario vertical</h1>
+        <form role="form">
+          <div class="form-group">
+            <label for="email" class="control-label">Email</label>
+            <input type="email" class="form-control" name="email" id="email" placeholder="a@c.d" />
+          </div>
+        </form>
+      </div>
+
+      <div class="row">
+        <h1>Ejemplo de formulario horizontal</h1>
+        <form role="form" class="form-horizontal">
+          <div class="form-group">
+            <label for="email" class="control-label col-md-3">Email</label>
+            <div class="col-md-6">
+              <input type="email" class="form-control" name="email" id="email" placeholder="a@c.d" />
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="row">
+        <h1>Ejemplo de formulario horizontal con glyphicon</h1>
+        <form class="form-horizontal">
+          <div class="form-group">
+            <label for="username" class="control-label col-md-3">Username:</label>
+            <div class="col-md-6">
+              <div class="input-group">
+                <div class="input-group-addon">
+                  <span class="glyphicon glyphicon-user"></span>
+                </div>
+                <input type="text" class="form-control" name="username" id="username" />
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="row">
+        <h1>Ejemplo de formulario horizontal con caracter no glyphicon</h1>
+        <form class="form-horizontal">
+          <div class="form-group">
+            <label for="twitter" class="control-label col-md-3">Twitter:</label>
+            <div class="col-md-6">
+              <div class="input-group">
+                <span class="input-group-addon">@</span>
+                <input type="text" class="form-control" name="twitter" id="twitter" />
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="row">
+        <h1>Ejemplo de formulario con grupo de botones</h1>
+        <form class="form-horizontal">
+          <div class="form-group">
+            <div class="col-md-offset-3 btn-group" data-toggle="buttons">
+              <label class="btn btn-primary">
+                <input type="radio" id="first" name="sample" />First
+              </label>
+              <label class="btn btn-primary">
+                <input type="radio" id="second" name="sample" />Second
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-default col-md-offset-3 col-md-4">Submit form</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="row">
+        <h1>Ejemplo de formulario con estados de validación</h1>
+        <form class="form-horizontal">
+          <!-- Primer elemento - Input - Glyphicon tras el input -->
+          <div class="form-group has-error has-feedback">
+            <label for="address" class="control-label col-md-3">Address:</label>
+            <div class="col-md-6">
+              <input type="text" name="address" id="address" class="form-control" />
+              <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+            </div>
+          </div>
+          <!-- Segundo elemento - Input group - Glyphicon tras el input-group -->
+          <div class="form-group has-error has-feedback">
+            <label for="username" class="control-label col-md-3">Username:</label>
+            <div class="col-md-6">
+              <div class="input-group">
+                <div class="input-group-addon">
+                  <span class="glyphicon glyphicon-user"></span>
+                </div>
+                <input type="text" class="form-control" name="username" id="username" />
+              </div>
+              <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="row">
+        <h1>Ejemplo de alerta</h1>
+        <div class="container">
+          <div class="alert alert-warning alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+            <h3>Warning</h3>
+            <div>
+              It appears that something has gone wrong. Click <a href="some_url" class="alert-link"> here</a> to show more info.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" style="padding-bottom: 50px;">
+        <h1>Ejemplo de cuadro de diálogo modal</h1>
+        <div id="myModal" class="modal fade" tabindex="-1">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Confirmation</h4>
+              </div>
+              <div class="modal-body">
+                <p>Do you want to save changes you made to document before closing?</p>
+                <p class="text-warning"><small>If you don't save, your changes will be lost.</small></p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">Show modal</button>
+      </div>
+
+    </div>
+    <!-- jQuery -->
+    <script src="./js/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="./js/bootstrap.min.js"></script>
+  </body>
+</html>
